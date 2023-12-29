@@ -5,9 +5,9 @@ const PORT = process.env.POST || 3977;
 
 mongoose.connect(
   // local
-  // `mongodb://${IP_DATABASE}:${PORT_DB}/rising`, 
+  `mongodb://${IP_DATABASE}:${PORT_DB}/rising`, 
   //montado
-  `mongodb+srv://${DB_USER}:${DB_PASSWORD}@${DB_HOST}`, 
+  // `mongodb+srv://${DB_USER}:${DB_PASSWORD}@${DB_HOST}`, 
 
   //por si las dudas
   // `mongodb+srv://risingconsultora:CarlaZarate123cy@rising.vvsv0r1.mongodb.net`, 

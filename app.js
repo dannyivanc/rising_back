@@ -7,11 +7,8 @@ const userRoutes = require("./router/user");
 const clientRoutes = require("./router/client")
 const transactionRoutes= require("./router/transaction")
 
-
-const menuRoutes = require("./router/menu");
 const courseRoutes = require("./router/course");
 const convocatoriaRoutes = require("./router/convocatoria");
-const newsletterRoutes = require("./router/newsletter");
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
@@ -27,11 +24,9 @@ app.use(`/`, userRoutes);
 app.use(`/`, clientRoutes);
 app.use(`/`, transactionRoutes);
 app.use(`/`, courseRoutes);
-
-
-app.use(`/`, menuRoutes);
 app.use(`/`, convocatoriaRoutes);
-app.use(`/`, newsletterRoutes);
+
+
 
 
 

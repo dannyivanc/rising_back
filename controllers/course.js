@@ -3,9 +3,6 @@ const image = require("../utils/image");
 
 function createCourse(req, res) {
   const course = new Course(req.body);
-
-  const imagePath = image.getFilePath(req.files.miniature);
-  course.miniature = imagePath;
   
 
   course.save((error, courseStored) => {
@@ -45,11 +42,6 @@ async function getAllCourses(req, res) {
 function updateCourse(req, res) {
   const { id } = req.params;
   const courseData = req.body;
-
-  if (req.files.miniature) {
-    const imagePath = image.getFilePath(req.files.miniature);
-    courseData.miniature = imagePath;
-  }
 
   Course.findByIdAndUpdate({ _id: id }, courseData, (error) => {
     if (error) {

@@ -3,12 +3,11 @@ const mongoosePaginate = require("mongoose-paginate");
 
 const CourseSchema = mongoose.Schema({
   title: String,
-  miniature: String,
-  description: String,
-  url: String,
   price: Number,
-  score: Number,
+  workload: Number,
+  urlimage: String,
 });
+
 
 CourseSchema.plugin(mongoosePaginate);
 

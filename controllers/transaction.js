@@ -46,36 +46,36 @@ async function getTransactions(req, res) {
 }
 
 async function createTransaction(req, res) {
+  const data= req.body;
+  console.log(data)
+  try{
   const date= new Date()
-  console.log(date)
-  const {price}=req.body
-  const precio=parseInt(price)
-    const transaction = new Transaction({...req.body,price:precio,date,state:false}); 
-    
-    console.log(transaction)
-    transaction.save((error, transacionStored) => {
-      if (error) {
-        res.status(400).send({ msg: "Error al crear la transaccion" });
-      } else {
-        res.status(201).send(transacionStored);
-      }
+  const promiseCompras = data.courses?.map(compra => {
+    const nuevaCompra = new Transaction({
+      course: compra.title,      
+      clientci:data.clientci,
+      clientname: data.clientname,
+      clientid: data.clientid,
+      price: compra.price,
+      seller:data.seller,
+      date,
+      grade:data.grade,
+      state:false,
     });
-  
-}
-
-async function updateClient(req, res) {
-  const { id } = req.params;
-  const clientData = req.body;
-  Transaction.findByIdAndUpdate({ _id: id }, clientData, (error) => {
-    if (error) {
-      res.status(400).send({ msg: "Error al actualizar el cliente" });
-    } else {
-      res.status(200).send({ msg: "Actualizacion correcta" });
-    }
+    return nuevaCompra.save();
   });
+
+  await Promise.all(promiseCompras);
+return  res.status(200).send({ msg: "Registrado correctamente" });
+}catch(err){
+  res.status(400).send({ msg: "se produjo un error" });
+  // console.log(err)
+}
 }
 
-async function deleteClient(req, res) {
+
+
+async function deleteTransaction(req, res) {
   const { id } = req.params;
   Transaction.findByIdAndDelete(id, (error) => {
     if (error) {
@@ -86,10 +86,38 @@ async function deleteClient(req, res) {
   });
 }
 
+
+
+async function getTransactionsSend(req, res) { 
+  try {
+    const transactions = await Transaction.find({state:false});      
+    if (transactions) {     
+      res.status(200).send(transactions);
+    } else {
+      res.status(404).send({msg:'No existen envios pendientes'});
+    }
+  } catch (error) {
+    res.status(500).send({msg:'Se produjo un error'});
+    // Manejar el error, si es necesario
+  }
+}
+
+async function updateTransaction(req, res) {
+  const { id } = req.params;
+  Transaction.findByIdAndUpdate({ _id: id },{ $set: { state: true } }, { new: true }, (error) => {
+    if (error) {
+      console.log('asd')
+      res.status(400).send({ msg: "Error al actualizar la compra" });
+    } else {
+      res.status(200).send({ msg: "Actualizacion correcta" });
+    }
+  });
+}
 module.exports = { 
   getVerificateTransaction,
   getTransactions,
   createTransaction,
-  updateClient,
-  deleteClient,
+  updateTransaction,
+  deleteTransaction,
+  getTransactionsSend
 };

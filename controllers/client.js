@@ -1,13 +1,5 @@
 const Client = require("../models/client");
 const Transaccion = require("../models/transaction");
-// course:String,
-// clientci:String,
-// clientname:String,
-// clientid:String,
-// price:Number,
-// seller:String,
-// date:Date,
-// state:Boolean,
 
 async function getClients(req, res) {    
     response = await Client.find();
@@ -63,11 +55,7 @@ async function createClient(req, res) {
       });
 
       await Promise.all(promiseCompras);
-      console.log('Compras guardadas:', await Promise.all(promiseCompras));
-     
-    
-
-
+      console.log('Compras guardadas:', await Promise.all(promiseCompras));   
     }catch(err){
       console.log('errorie')
       console.log(err)
