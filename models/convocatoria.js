@@ -5,6 +5,7 @@ const ConvocatoriaSchema = mongoose.Schema({
   title: String,
   position:String,
   date:String,
+  hour:String,
   pay:Number,
   location:String,
   cv:Boolean,

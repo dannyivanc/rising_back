@@ -1,6 +1,7 @@
 const Client = require("../models/client");
 const Transaccion = require("../models/transaction");
 
+
 async function getClients(req, res) {    
     response = await Client.find();
   res.status(200).send(response);
@@ -83,6 +84,7 @@ async function deleteClient(req, res) {
     if (error) {
       res.status(400).send({ msg: "Error al eliminar el cliente" });
     } else {
+      Transaccion.deleteMany({ clientid:id  });
       res.status(200).send({ msg: "Cliente eliminado" });
     }
   });

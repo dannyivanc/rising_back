@@ -6,7 +6,7 @@ const api = express.Router();
 
 api.post("/transaction", TransactionController.createTransaction);
 api.get("/transaction/:clientid",[md_auth.asureAuth,md_auth.roleAuth], TransactionController.getTransactions);
-api.get("/transactionverificate/:transactionid",[md_auth.asureAuth], TransactionController.getVerificateTransaction);
+api.get("/transactionverificate/:transactionid", TransactionController.getVerificateTransaction);
 api.delete("/transaction/:id", [md_auth.asureAuth,md_auth.roleAuth], TransactionController.deleteTransaction);
 
 api.get("/transactionsend",[md_auth.asureAuth], TransactionController.getTransactionsSend);

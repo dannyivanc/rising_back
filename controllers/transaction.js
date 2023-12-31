@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 
 async function getVerificateTransaction(req, res) {
   const { transactionid } = req.params;
+  console.log(req.params)
   if (!mongoose.Types.ObjectId.isValid(transactionid)) {
     return res.status(400).send({ msg: "El codigo no es válido" });
   }
@@ -21,15 +22,13 @@ async function getVerificateTransaction(req, res) {
       });
     }
   } catch (error) {
-    console.log(error)
     return res.status(500).send({ msg: "Error en el servidor" });
     
   }
 }
 
 async function getTransactions(req, res) { 
-  const clientid=req.params.clientid;
-    console.log(clientid)     
+  const clientid=req.params.clientid; 
     try {
       const transactions = await Transaction.find({clientid:clientid});      
       if (transactions) {
@@ -47,7 +46,6 @@ async function getTransactions(req, res) {
 
 async function createTransaction(req, res) {
   const data= req.body;
-  console.log(data)
   try{
   const date= new Date()
   const promiseCompras = data.courses?.map(compra => {
