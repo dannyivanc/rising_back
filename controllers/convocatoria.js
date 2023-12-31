@@ -79,10 +79,24 @@ function getConvocatoria(req, res) {
   });
 }
 
+
+function deletePrevConvocatorias(req, res) {
+  const { fecha } = req.params;
+  Convocatoria.deleteMany({ date: { $lt: fecha } }, (error) => {
+    if (error) {
+      res.status(400).send({ msg: "Error al eliminar las convocatorias" });
+    } else {
+      res.status(200).send({ msg: "Convocatorias eliminadas" });
+    }
+  });
+}
+
+
 module.exports = {
   createConvocatoria,
   getConvocatorias,
   updateConvocatoria,
   deleteConvocatoria,
   getConvocatoria,
+  deletePrevConvocatorias
 };
