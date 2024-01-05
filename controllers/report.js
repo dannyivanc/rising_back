@@ -17,11 +17,12 @@ async function clientsReport(req, res) {
   res.status(200).send(formattedResponse);
 }
 
+  
 
 
 async function clientTransactions(req, res) {  
   const id= req.params.id  
-  const response = await Transaccion.find({clientid:id});
+  const response = await Transaccion.find({clientid:id}).populate('course').populate('seller');
   console.log(response)
   if(response.length!==0){
     const formattedResponse = response.map((transaction) => {
@@ -30,9 +31,9 @@ async function clientTransactions(req, res) {
       const dia = transaction.date.getDate();
       const fechaSeparada = `${dia < 10 ? '0' + dia : dia}-${mes < 10 ? '0' + mes : mes}-${año}`;
       return{
-        curso: transaction.course,
+        curso: transaction.course.title,
         fecha: fechaSeparada,
-        agente: transaction.seller,
+        agente: transaction.seller.name,
         precio: transaction.price
       }
     });
@@ -44,6 +45,7 @@ async function clientTransactions(req, res) {
     res.status(200).send(response);
   }
 }
+
 
 
 async function coursesForReport(req, res) {    

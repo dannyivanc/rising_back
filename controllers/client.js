@@ -42,17 +42,19 @@ async function createClient(req, res) {
       });
       const promiseCompras = data.courses.map(compra => {
         const nuevaCompra = new Transaccion({
-          course: compra.title,      
-          clientci:clientStored.ci,
-          clientname: clientStored.name,
-          clientid: clientStored._id,
-          price: compra.price,
-          seller:data.seller,
+          price: compra.price,  
           date,
-          grade:clientStored.grade,
           state:false,
+          course: compra.course_id,      
+          clientid: clientStored._id,
+          seller:data.seller,
         });
-
+        // price:Number,
+        // date:Date,
+        // state:Boolean,
+        // course: { type: mongoose.Schema.Types.ObjectId, ref: 'Course' },
+        // clientid: { type: mongoose.Schema.Types.ObjectId, ref: 'Client' },
+        // seller: { type: mongoose.Schema.Types.ObjectId, ref: 'User' }    
         return nuevaCompra.save();
       });
 

@@ -30,10 +30,23 @@ async function getVerificateTransaction(req, res) {
 async function getTransactions(req, res) { 
   const clientid=req.params.clientid; 
     try {
-      const transactions = await Transaction.find({clientid:clientid});      
+      const transactions = await Transaction.find({clientid:clientid}).populate('course').populate('clientid');      
+      // console.log(transactions)
       if (transactions) {
-        console.log(transactions)
-        res.status(200).send(transactions);
+        const data=transactions.map(trans=>{
+         return{
+          course:trans.course.title,
+          clientci:trans.clientid.ci,
+          clientname:trans.clientid.name,
+          clientid:trans.clientid._id,
+          date:trans.date,
+          grade:trans.clientid.grade,
+          state:trans.state,
+          _id:trans._id,
+         }
+        })
+        console.log(data)
+        res.status(200).send(data);
       } else {
         res.status(404).send({msg:'usuario no encontrado'});
       }
@@ -43,6 +56,16 @@ async function getTransactions(req, res) {
     }
     
 }
+// course:String,
+  // clientci:String,
+  // clientname:String,
+  // clientid:String,
+  // price:Number,
+  // seller:String,
+  // date:Date,
+  // grade:String,
+  // state:Boolean,
+
 
 async function createTransaction(req, res) {
   const data= req.body;
@@ -88,9 +111,21 @@ async function deleteTransaction(req, res) {
 
 async function getTransactionsSend(req, res) { 
   try {
-    const transactions = await Transaction.find({state:false});      
+    const transactions = await Transaction.find({state:false}).populate('course').populate('clientid');     ;      
     if (transactions) {     
-      res.status(200).send(transactions);
+      const data=transactions.map(trans=>{
+        return{
+         course:trans.course.title,
+         clientci:trans.clientid.ci,
+         clientname:trans.clientid.name,
+         clientid:trans.clientid._id,
+         date:trans.date,
+         grade:trans.clientid.grade,
+         state:trans.state,
+         _id:trans._id,
+        }
+       })
+      res.status(200).send(data);
     } else {
       res.status(404).send({msg:'No existen envios pendientes'});
     }
@@ -99,6 +134,16 @@ async function getTransactionsSend(req, res) {
     // Manejar el error, si es necesario
   }
 }
+
+
+
+
+
+
+
+
+
+
 
 async function updateTransaction(req, res) {
   const { id } = req.params;
