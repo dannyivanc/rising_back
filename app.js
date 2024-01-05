@@ -6,6 +6,7 @@ const authRoutes = require("./router/auth");
 const userRoutes = require("./router/user");
 const clientRoutes = require("./router/client")
 const transactionRoutes= require("./router/transaction")
+const reportRoutes= require("./router/report")
 
 const courseRoutes = require("./router/course");
 const convocatoriaRoutes = require("./router/convocatoria");
@@ -25,6 +26,7 @@ app.use(`/`, clientRoutes);
 app.use(`/`, transactionRoutes);
 app.use(`/`, courseRoutes);
 app.use(`/`, convocatoriaRoutes);
+app.use(`/`, reportRoutes);
 
 
 

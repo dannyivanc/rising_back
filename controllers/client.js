@@ -3,9 +3,10 @@ const Transaccion = require("../models/transaction");
 
 
 async function getClients(req, res) {    
-    response = await Client.find();
+    const response = await Client.find();
   res.status(200).send(response);
 }
+
 
 
 async function createClient(req, res) {
@@ -94,5 +95,5 @@ module.exports = {
   getClients,
   createClient,
   updateClient,
-  deleteClient,
+  deleteClient, 
 };
