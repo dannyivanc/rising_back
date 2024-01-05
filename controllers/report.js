@@ -1,6 +1,7 @@
 const Client = require("../models/client");
 const Transaccion = require("../models/transaction");
 const User = require("../models/user");
+const Course = require("../models/course");
 
 
 
@@ -42,13 +43,23 @@ async function clientTransactions(req, res) {
     console.log(response)
     res.status(200).send(response);
   }
+}
 
 
+async function coursesForReport(req, res) {    
+  const response = await Course.find();
+  const formattedResponse = response.map((course) => ({
+    key: course._id.toString(),
+    value: course._id.toString(),
+    text: course.title 
+  }));
+res.status(200).send(formattedResponse);
 }
 
 
 module.exports = { 
   clientsReport,
-  clientTransactions
+  clientTransactions,
+  coursesForReport
 };
   

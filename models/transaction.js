@@ -10,6 +10,8 @@ const transactionSchema = mongoose.Schema({
   date:Date,
   grade:String,
   state:Boolean,
+  
+  
 
 
 });
