@@ -45,7 +45,7 @@ async function getTransactions(req, res) {
           _id:trans._id,
          }
         })
-        console.log(data)
+        // console.log(data)
         res.status(200).send(data);
       } else {
         res.status(404).send({msg:'usuario no encontrado'});
