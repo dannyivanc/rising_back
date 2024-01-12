@@ -6,10 +6,9 @@ const CourseSchema = mongoose.Schema({
   price: Number,
   workload: Number,
   urlimage: String,
-  miniature:String //para borrar
 });
 
 
 CourseSchema.plugin(mongoosePaginate);
 
-module.exports = mongoose.model("Course", CourseSchema);
+// module.exports = mongoose.model("Course", CourseSchema);

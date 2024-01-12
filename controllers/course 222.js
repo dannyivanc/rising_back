@@ -1,12 +1,8 @@
 const Course = require("../models/course");
-const image = require("../utils/image");
+// const image = require("../utils/image");
 
 function createCourse(req, res) {
-
   const course = new Course(req.body);
-  console.log(req.files)
-  const imagePath = image.getFilePath(req.files.file);
-  course.miniature = imagePath;
   
   course.save((error, courseStored) => {
     if (error) {
@@ -15,7 +11,6 @@ function createCourse(req, res) {
       res.status(201).send(courseStored);
     }
   });
-
 }
 
  async function getCourse(req, res) {
@@ -46,12 +41,6 @@ async function getAllCourses(req, res) {
 function updateCourse(req, res) {
   const { id } = req.params;
   const courseData = req.body;
-  
-  if (req.files.miniature) {
-    const imagePath = image.getFilePath(req.files.miniature);
-    courseData.miniature = imagePath;
-  }
-
 
   Course.findByIdAndUpdate({ _id: id }, courseData, (error) => {
     if (error) {

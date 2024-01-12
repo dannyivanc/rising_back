@@ -15,6 +15,7 @@ const TransactionSchema = mongoose.Schema({
   price:Number,
   date:Date,
   state:Boolean,
+  code:{ type: String,unique: true},
   course: { type: mongoose.Schema.Types.ObjectId, ref: 'Course' },
   clientid: { type: mongoose.Schema.Types.ObjectId, ref: 'Client' },
   seller: { type: mongoose.Schema.Types.ObjectId, ref: 'User' }

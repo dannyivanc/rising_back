@@ -1,0 +1,4 @@
+git fetch --all
+git fetch origin master 
+git reset --hard origin/master
+git reset --hard origin/master

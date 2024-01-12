@@ -10,14 +10,14 @@ async function getClients(req, res) {
 
 
 async function createClient(req, res) {
-
   const data=req.body
-  // console.log(data)
   if(!data.courses ||data?.courses.length === 0 ){ 
     const client = new Client(data); 
     client.save((error, clientStored) => {
       if (error) {      
-        res.status(409).send({ msg: "Usuario ya registrado" });
+        console.log('a')
+        // res.status(409).send({ msg: "Usuario ya registrado" });
+        return("Usuario ya registrado")
       } 
       else {
         res.status(201).send(clientStored);
@@ -25,45 +25,85 @@ async function createClient(req, res) {
     });
   }
   else{
-    try{
-      const date= new Date()
-      const client = new Client( data); 
+    try {
+      const { courses, seller } = req.body;
+      console.log(courses)
+      const date = new Date();
+      const client = new Client(data); 
       const clientStored =  await new Promise((resolve, reject) => {
         client.save((error, clientStored) => {
           if (error) {      
-            res.status(409).send({ msg: "Usuario ya registrado" });
-            reject(error);
+            console.log('b') 
+            reject('Cliente ya registrado, verifique el carnet');
           } 
           else {      
-            res.status(201).send(clientStored);
+            // res.status(201).send(clientStored);
             resolve(clientStored);
           }
         });
       });
-      const promiseCompras = data.courses.map(compra => {
-        const nuevaCompra = new Transaccion({
-          price: compra.price,  
+      console.log(clientStored)
+      const promiseCompras = courses?.map(async compra => {
+        const generateUniqueCode = async () => {
+          const numeros = Math.floor(1000 + Math.random() * 9000);
+          const letras = Array.from({ length: 4 }, () => String.fromCharCode(97 + Math.floor(Math.random() * 26))).join('');
+          const codigo = `${numeros}-${letras}`;
+          const existingTransaction = await Transaccion.findOne({ code: codigo });
+          if (existingTransaction) {
+            return generateUniqueCode(); 
+          } else {
+            return codigo; 
+          }
+        };
+        const codigo = await generateUniqueCode();
+        return new Transaccion({
+          course: compra.course_id,       
+          clientid:clientStored._id,
+          price: compra.price,
+          seller,
+          code: codigo,
           date,
-          state:false,
-          course: compra.course_id,      
-          clientid: clientStored._id,
-          seller:data.seller,
-        });
-        // price:Number,
-        // date:Date,
-        // state:Boolean,
-        // course: { type: mongoose.Schema.Types.ObjectId, ref: 'Course' },
-        // clientid: { type: mongoose.Schema.Types.ObjectId, ref: 'Client' },
-        // seller: { type: mongoose.Schema.Types.ObjectId, ref: 'User' }    
-        return nuevaCompra.save();
+          state: false,
+        }).save();
       });
-
       await Promise.all(promiseCompras);
-      console.log('Compras guardadas:', await Promise.all(promiseCompras));   
-    }catch(err){
-      console.log('errorie')
-      console.log(err)
+       res.status(200).send({ msg: "Registrado correctamente" });
+    } catch (err) {
+      console.error('Error al crear transacción:', err);
+      res.status(400).send({ msg: err });
     }
+    // try{
+    //   const date= new Date()
+    //   const client = new Client( data); 
+      // const clientStored =  await new Promise((resolve, reject) => {
+      //   client.save((error, clientStored) => {
+      //     if (error) {      
+      //       res.status(409).send({ msg: "Usuario ya registrado" });
+      //       reject(error);
+      //     } 
+      //     else {      
+      //       res.status(201).send(clientStored);
+      //       resolve(clientStored);
+      //     }
+      //   });
+      // });
+    //   const promiseCompras = data.courses.map(compra => {
+    //     const nuevaCompra = new Transaccion({
+    //       price: compra.price,  
+    //       date,
+    //       state:false,
+    //       course: compra.course_id,      
+    //       clientid: clientStored._id,
+    //       seller:data.seller,
+    //     });
+    //     return nuevaCompra.save();
+    //   });
+    //   await Promise.all(promiseCompras);
+    //   console.log('Compras guardadas:', await Promise.all(promiseCompras));   
+    // }catch(err){
+    //   console.log('errorie')
+    //   console.log(err)
+    // }
   }
 
 

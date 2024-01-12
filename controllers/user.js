@@ -41,7 +41,7 @@ async function createUser(req, res) {
     user.password = hasPassword;  
     user.save((error, userStored) => {
       if (error) {
-        res.status(400).send({ msg: "Error al crear el usuario" });
+        res.status(400).send({ msg: "Error al crear el usuario,Verifique el Nombre de usuario" });
       } else {
         res.status(201).send(userStored);
       }
