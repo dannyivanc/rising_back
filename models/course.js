@@ -5,7 +5,7 @@ const CourseSchema = mongoose.Schema({
   title: String,
   price: Number,
   workload: Number,
-  urlimage: String,
+  // urlimage: String,
   miniature:String //para borrar
 });
 
