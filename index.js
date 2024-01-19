@@ -1,16 +1,18 @@
 const mongoose = require("mongoose");
 const app = require("./app");
-const {IP_SERVER,IP_DATABASE,PORT_DB,DB_USER,DB_PASSWORD,DB_HOST} = require("./constants");
+const {IP_SERVER,IP_DATABASE,PORT_DB,DB_USER,DB_PASSWORD,DB_HOST,URI,options} = require("./constants");
 const PORT = process.env.POST || 3977;
 
-mongoose.connect(
-  // local
-  `mongodb://${IP_DATABASE}:${PORT_DB}/rising`, 
-  //montado
-  // `mongodb+srv://${DB_USER}:${DB_PASSWORD}@${DB_HOST}`, 
 
-  //por si las dudas
-  // `mongodb+srv://risingconsultora:CarlaZarate123cy@rising.vvsv0r1.mongodb.net`, 
+
+mongoose.connect(URI,options,
+//MongoClient.connect(URI,
+
+  // local
+  //`mongodb://${IP_DATABASE}:${PORT_DB}/rising`, 
+  //montado el mongoatlas
+ //  `mongodb+srv://${DB_USER}:${DB_PASSWORD}@${DB_HOST}`, 
+
   (error) => {
     if (error) throw error;
 

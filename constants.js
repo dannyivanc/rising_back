@@ -1,15 +1,42 @@
 require('dotenv').config();
+const JWT_SECRET_KEY ="gR7cH9Svfj8JLe4c186Ghs48hheb3902nh5DsA"//param montar en mongoatlas
+const DB_USER = 'risingconsultora';
+const DB_PASSWORD = 'CarlaZarate123cy';
+const DB_HOST = 'rising.vvsv0r1.mongodb.net';
+//const URI= `mongodb+srv://${DB_USER}:${DB_PASSWORD}@${DB_HOST}`; //para mongo atlas
 
-const JWT_SECRET_KEY ="gR7cH9Svfj8JLe4c186Ghs48hheb3902nh5DsA"
-//param montar
-const DB_USER = process.env.DB_USER;
-const DB_PASSWORD = process.env.DB_PASSWORD;
-const DB_HOST = process.env.DB_HOST;
+//para el vps y pruevas
+const IP_DATABASE = '192.95.21.32';
+const PORT_DB = '17777';
+const IP_SERVER = 'localhost';
 
-const IP_DATABASE = process.env.IP_DATABASE;
-const PORT_DB = process.env.PORT_DB;
-const IP_SERVER = process.env.IP_SERVER;
+const USERNAME = 'mongodb_vps_user';
+const PASSWORD = 'mongodb_vps_pass';
+const DATABASE = 'rising';
+//const DATABASE = 'admin';
 
+const options= {
+  useNewUrlParser: true , 
+  useUnifiedTopology:true,
+  authSource:'admin',
+ 
+};
+//const URI = 'mongodb://usuario:contraseña@nombre-del-contenedor-mongo:27017/nombreDeTuBaseDeDatos';
+
+
+//para local pruevas
+//const URI = `mongodb://${IP_DATABASE}:${PORT_DB}/${DATABASE}`  //para local pruevas
+
+//para el vps con user y password
+const URI= `mongodb://${USERNAME}:${PASSWORD}@${IP_DATABASE}:${PORT_DB}/${DATABASE}`;
+//const URI= `mongodb://${USERNAME}:${PASSWORD}@$mongo6.0.4:${PORT_DB}/${DATABASE}`;
+//const URI = 'mongodb://mongo_vps_user:mongo_vps_pass@192.95.21.32:17777/rising';
+
+
+
+
+
+console.log(URI)
 
 
 module.exports = {
@@ -19,5 +46,7 @@ module.exports = {
   DB_HOST,
   IP_DATABASE,
   PORT_DB,
-  IP_SERVER
+  IP_SERVER,
+  URI,
+  options
 };
