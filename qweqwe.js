@@ -1,23 +1,10 @@
 const mongoose = require("mongoose");
-const https= require('https');
 const app = require("./app");
 const {IP_SERVER,IP_DATABASE,PORT_DB,DB_USER,DB_PASSWORD,DB_HOST,URI,options} = require("./constants");
-const PORT = process.env.POST || 4000;
-const fs= require('fs');
-
-
-
-
-const privateKey = fs.readFileSync('/etc/letsencrypt/live/risingconsultora.com/privkey.pem');
-const certificate = fs.readFileSync('/etc/letsencrypt/live/risingconsultora.com/fullchain.pem');
-//const ca = fs.readFileSync('/etc/letsencrypt/live/risingconsultora.com/cert.pem', 'utf8');
-
-const credentials = { key: privateKey, cert: certificate };
-const server = https.createServer(credentials,app);
-
-
+const PORT = process.env.POST || 3977;
 
 mongoose.connect(URI,options,
+//MongoClient.connect(URI,
 
   // local
   //`mongodb://${IP_DATABASE}:${PORT_DB}/rising`, 
@@ -25,10 +12,9 @@ mongoose.connect(URI,options,
  //  `mongodb+srv://${DB_USER}:${DB_PASSWORD}@${DB_HOST}`, 
 
   (error) => {
-   if (error) throw error;
+    if (error) throw error;
 
-//app.listen(PORT, () => {
- server.listen(PORT, () => {
+    app.listen(PORT, () => {
       
       console.log("######################");        
       console.log("Corriendo en:");
@@ -42,4 +28,5 @@ mongoose.connect(URI,options,
       
       // console.log(` base de datos: mongodb+srv://${DB_USER}:${DB_PASSWORD}@${DB_HOST}`);
     });
-  });
+  }
+);

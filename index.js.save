@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const https= require('https');
 const app = require("./app");
 const {IP_SERVER,IP_DATABASE,PORT_DB,DB_USER,DB_PASSWORD,DB_HOST,URI,options} = require("./constants");
-const PORT = process.env.POST || 4000;
+const PORT = process.env.POST || 3977;
 const fs= require('fs');
 
 
@@ -25,10 +25,10 @@ mongoose.connect(URI,options,
  //  `mongodb+srv://${DB_USER}:${DB_PASSWORD}@${DB_HOST}`, 
 
   (error) => {
-   if (error) throw error;
+    if (error) throw error;
 
 //app.listen(PORT, () => {
- server.listen(PORT, () => {
+   server.listen(PORT, () => {
       
       console.log("######################");        
       console.log("Corriendo en:");
@@ -42,4 +42,5 @@ mongoose.connect(URI,options,
       
       // console.log(` base de datos: mongodb+srv://${DB_USER}:${DB_PASSWORD}@${DB_HOST}`);
     });
-  });
+  }
+);

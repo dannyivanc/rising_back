@@ -25,13 +25,13 @@ app.use(cors());
 //     next();
 //   });
 
-app.use(`/`, authRoutes);
-app.use(`/`, userRoutes);
-app.use(`/`, clientRoutes);
-app.use(`/`, transactionRoutes);
-app.use(`/`, courseRoutes);
-app.use(`/`, convocatoriaRoutes);
-app.use(`/`, reportRoutes);
+app.use(`/api/`, authRoutes);
+app.use(`/api/`, userRoutes);
+app.use(`/api/`, clientRoutes);
+app.use(`/api/`, transactionRoutes);
+app.use(`/api/`, courseRoutes);
+app.use(`/api/`, convocatoriaRoutes);
+app.use(`/api/`, reportRoutes);
 
 
 

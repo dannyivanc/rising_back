@@ -4,7 +4,8 @@ const Transaccion = require("../models/transaction");
 
 async function getClients(req, res) {    
     const response = await Client.find();
-  res.status(200).send(response);
+    const reversedResponse = response.reverse();
+  res.status(200).send(reversedResponse);
 }
 
 
@@ -12,22 +13,19 @@ async function getClients(req, res) {
 async function createClient(req, res) {
   const data=req.body
   if(!data.courses ||data?.courses.length === 0 ){ 
-    const client = new Client(data); 
+    const client = new Client(data);  
     client.save((error, clientStored) => {
-      if (error) {      
-        console.log('a')
-        // res.status(409).send({ msg: "Usuario ya registrado" });
-        return("Usuario ya registrado")
+      if (error) {                   
+        res.status(400).send({ msg: 'Usuario ya registrado, verificar el numero de carnet' });
       } 
-      else {
-        res.status(201).send(clientStored);
+      else {     
+        res.status(200).send({ msg: 'Registrado correctamente' });
       }
     });
   }
   else{
     try {
-      const { courses, seller } = req.body;
-      console.log(courses)
+      const { courses, seller } = req.body;     
       const date = new Date();
       const client = new Client(data); 
       const clientStored =  await new Promise((resolve, reject) => {
@@ -42,7 +40,6 @@ async function createClient(req, res) {
           }
         });
       });
-      console.log(clientStored)
       const promiseCompras = courses?.map(async compra => {
         const generateUniqueCode = async () => {
           const numeros = Math.floor(1000 + Math.random() * 9000);
@@ -69,7 +66,7 @@ async function createClient(req, res) {
       await Promise.all(promiseCompras);
        res.status(200).send({ msg: "Registrado correctamente" });
     } catch (err) {
-      console.error('Error al crear transacción:', err);
+      console.error('Error al crear cliente:', err);
       res.status(400).send({ msg: err });
     }
     // try{
@@ -123,14 +120,22 @@ async function updateClient(req, res) {
 
 async function deleteClient(req, res) {
   const { id } = req.params;
-  Client.findByIdAndDelete(id, (error) => {
-    if (error) {
-      res.status(400).send({ msg: "Error al eliminar el cliente" });
-    } else {
-      Transaccion.deleteMany({ clientid:id  });
-      res.status(200).send({ msg: "Cliente eliminado" });
-    }
-  });
+  try {
+    await Client.findByIdAndDelete(id);
+    await Transaccion.deleteMany({ clientid: id });   
+    res.status(200).send({ msg: "Cliente eliminado" });
+  } catch (error) {     
+    res.status(500).send({ msg: "Error al eliminar el cliente" });
+  }
+
+  // Client.findByIdAndDelete(id, (error) => {
+  //   if (error) {
+  //     res.status(400).send({ msg: "Error al eliminar el cliente" });
+  //   } else {
+  //     Transaccion.deleteMany({ clientid:id  });
+  //     res.status(200).send({ msg: "Cliente eliminado" });
+  //   }
+  // });
 }
 
 module.exports = { 

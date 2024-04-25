@@ -37,9 +37,9 @@ function login(req, res) {
   if (!username) res.status(400).send({ msg: "El nombre de Usuario es obligatorio" });
   if (!password) res.status(400).send({ msg: "La contraseña es obligatoria" });
 
-  const usernameLowerCase = username.toLowerCase();
+  // const usernameLowerCase = username.toLowerCase();
 
-  User.findOne({ username: usernameLowerCase }, (error, userStore) => {
+  User.findOne({ username}, (error, userStore) => {
     if (error) {
       res.status(500).send({ msg: "Error del servidor" });
     }

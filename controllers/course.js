@@ -24,7 +24,7 @@ async function createCourse(req, res) {
   const options = {
     page: parseInt(page),
     limit: parseInt(limit),
-    sort: { created_at: "desc" },
+    sort: { _id: "desc" },
   };
 
   Course.paginate({}, options, (error, courses) => {
@@ -38,7 +38,8 @@ async function createCourse(req, res) {
 }
 
 async function getAllCourses(req, res) {    
-  response = await Course.find();
+
+	response = await Course.find();
   res.status(200).send(response);
 }
 

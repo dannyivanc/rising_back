@@ -1,0 +1,172 @@
+nohup: no se tendrá en cuenta la entrada
+
+> rising@0.0.1 start
+> node index.js
+
+mongodb://mongodb_vps_user:mongodb_vps_pass@192.95.21.32:17777/rising
+######################
+Corriendo en:
+http://localhost:4000
+######################
+Base de datos local:
+mongodb://192.95.21.32:17777/rising
+######################
+{
+  _id: new ObjectId("65b6a95e0450edcd96ed4b1e"),
+  name: 'user',
+  username: 'user',
+  password: '$2a$10$l8ixUVfGcVCTJ4LrlsICIu55vw4sHOaatLG.jkeOUNvP8AwO1BrxW',
+  role: 'admin',
+  active: true,
+  __v: 0
+}
+------
+{
+  title: 'PRIMEROS AUXILIOS',
+  price: '150',
+  miniature: 'blob:https://risingconsultora.com/d10d6b08-23ed-4d10-bdac-538bfcbcf6dc',
+  workload: '20'
+}
+{
+  _id: new ObjectId("65f1aa6d45ad8cd09b7ef71d"),
+  title: 'PRIMEROS AUXILIOS',
+  price: 150,
+  workload: 20,
+  miniature: 'course/WWHjqBhy2Kr20HtNkl7SX1Zx.png',
+  __v: 0
+}
+{
+  file: {
+    fieldName: 'file',
+    originalFilename: '1no.png',
+    path: 'uploads/course/mjoxdTNjc2L40FEJ7foXVGI5.png',
+    headers: {
+      'content-disposition': 'form-data; name="file"; filename="1no.png"',
+      'content-type': 'image/png'
+    },
+    size: 42863,
+    name: '1no.png',
+    type: 'image/png'
+  }
+}
+------
+course/WWHjqBhy2Kr20HtNkl7SX1Zx.png
+Error al eliminar la imagen antigua: [Error: ENOENT: no such file or directory, unlink '/home/bejoycesuservps/Proyectos/Rising/back/uploads/course/WWHjqBhy2Kr20HtNkl7SX1Zx.png'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'unlink',
+  path: '/home/bejoycesuservps/Proyectos/Rising/back/uploads/course/WWHjqBhy2Kr20HtNkl7SX1Zx.png'
+}
+------
+{
+  title: 'PRIMEROS AUXILIOS',
+  price: '150',
+  miniature: 'blob:https://risingconsultora.com/59bc1cbf-d4e2-417b-bfaf-2c38311625ed',
+  workload: '20'
+}
+{
+  _id: new ObjectId("65f1aa6d45ad8cd09b7ef71d"),
+  title: 'PRIMEROS AUXILIOS',
+  price: 150,
+  workload: 20,
+  miniature: 'course/mjoxdTNjc2L40FEJ7foXVGI5.png',
+  __v: 0
+}
+{
+  file: {
+    fieldName: 'file',
+    originalFilename: 'blancoo.png',
+    path: 'uploads/course/ZNyCCzk2uCoEVivW7RXMonb4.png',
+    headers: {
+      'content-disposition': 'form-data; name="file"; filename="blancoo.png"',
+      'content-type': 'image/png'
+    },
+    size: 1268,
+    name: 'blancoo.png',
+    type: 'image/png'
+  }
+}
+------
+course/mjoxdTNjc2L40FEJ7foXVGI5.png
+{
+  _id: new ObjectId("65a9e3063ebc167586985c73"),
+  name: 'Carla Yessica Zarate',
+  username: 'Carla Zarate 25',
+  role: 'admin',
+  active: true,
+  password: '$2a$10$HkS8HPrNKOiT55htEBFqJuhKnqKSsKE606hijJcfA7s1Sfw0yqvVi',
+  __v: 0
+}
+------
+{
+  title: 'PRIMEROS AUXILIOS',
+  price: '150',
+  miniature: 'blob:https://risingconsultora.com/145d6f53-590f-4173-9a75-c3d303abc65f',
+  workload: '20'
+}
+{
+  _id: new ObjectId("65f1aa6d45ad8cd09b7ef71d"),
+  title: 'PRIMEROS AUXILIOS',
+  price: 150,
+  workload: 20,
+  miniature: 'course/ZNyCCzk2uCoEVivW7RXMonb4.png',
+  __v: 0
+}
+{
+  file: {
+    fieldName: 'file',
+    originalFilename: 'curso en primeros auxilios (4).png',
+    path: 'uploads/course/BA7zNK1HBomuRKF5LrCqUMo1.png',
+    headers: {
+      'content-disposition': 'form-data; name="file"; filename="curso en primeros auxilios (4).png"',
+      'content-type': 'image/png'
+    },
+    size: 193071,
+    name: 'curso en primeros auxilios (4).png',
+    type: 'image/png'
+  }
+}
+------
+course/ZNyCCzk2uCoEVivW7RXMonb4.png
+{
+  _id: new ObjectId("65a9e3063ebc167586985c73"),
+  name: 'Carla Yessica Zarate',
+  username: 'Carla Zarate 25',
+  role: 'admin',
+  active: true,
+  password: '$2a$10$HkS8HPrNKOiT55htEBFqJuhKnqKSsKE606hijJcfA7s1Sfw0yqvVi',
+  __v: 0
+}
+------
+{
+  title: 'PRIMEROS AUXILIOS',
+  price: '150',
+  miniature: 'course/BA7zNK1HBomuRKF5LrCqUMo1.png',
+  workload: '20'
+}
+{
+  _id: new ObjectId("65f1aa6d45ad8cd09b7ef71d"),
+  title: 'PRIMEROS AUXILIOS',
+  price: 150,
+  workload: 20,
+  miniature: 'course/BA7zNK1HBomuRKF5LrCqUMo1.png',
+  __v: 0
+}
+{}
+------
+course/BA7zNK1HBomuRKF5LrCqUMo1.png
+/home/bejoycesuservps/Proyectos/Rising/back/utils/image.js:3
+  const filePath = file.path;
+                        ^
+
+TypeError: Cannot read properties of undefined (reading 'path')
+    at Object.getFilePath (/home/bejoycesuservps/Proyectos/Rising/back/utils/image.js:3:25)
+    at updateCourse (/home/bejoycesuservps/Proyectos/Rising/back/controllers/course.js:100:31)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+Node.js v18.18.0
+npm notice 
+npm notice New major version of npm available! 9.8.1 -> 10.5.0
+npm notice Changelog: <https://github.com/npm/cli/releases/tag/v10.5.0>
+npm notice Run `npm install -g npm@10.5.0` to update!
+npm notice 

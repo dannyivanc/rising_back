@@ -1,0 +1,1019 @@
+nohup: no se tendrá en cuenta la entrada
+
+> rising@0.0.1 start
+> node index.js
+
+mongodb://mongodb_vps_user:mongodb_vps_pass@192.95.21.32:17777/rising
+######################
+Corriendo en:
+http://localhost:4000
+######################
+Base de datos local:
+mongodb://192.95.21.32:17777/rising
+######################
+{
+  _id: new ObjectId("65a9e3063ebc167586985c73"),
+  name: 'Carla Yessica Zarate',
+  username: 'Carla Zarate 25',
+  role: 'admin',
+  active: true,
+  password: '$2a$10$HkS8HPrNKOiT55htEBFqJuhKnqKSsKE606hijJcfA7s1Sfw0yqvVi',
+  __v: 0
+}
+------
+{
+  title: 'PRIMEROS AUXILIOS',
+  price: '150',
+  miniature: 'course/BA7zNK1HBomuRKF5LrCqUMo1.png',
+  workload: '50',
+  file: 'null'
+}
+{
+  _id: new ObjectId("65f1aa6d45ad8cd09b7ef71d"),
+  title: 'PRIMEROS AUXILIOS',
+  price: 150,
+  workload: 20,
+  miniature: 'course/BA7zNK1HBomuRKF5LrCqUMo1.png',
+  __v: 0
+}
+{}
+------
+course/BA7zNK1HBomuRKF5LrCqUMo1.png
+Error al eliminar la imagen antigua: [Error: ENOENT: no such file or directory, unlink '/home/bejoycesuservps/Proyectos/Rising/back/uploads/course/BA7zNK1HBomuRKF5LrCqUMo1.png'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'unlink',
+  path: '/home/bejoycesuservps/Proyectos/Rising/back/uploads/course/BA7zNK1HBomuRKF5LrCqUMo1.png'
+}
+------
+{
+  title: 'PRIMEROS AUXILIOS',
+  price: '150',
+  miniature: 'null',
+  workload: '20',
+  file: 'null'
+}
+{
+  _id: new ObjectId("65f1aa6d45ad8cd09b7ef71d"),
+  title: 'PRIMEROS AUXILIOS',
+  price: 150,
+  workload: 50,
+  miniature: 'null',
+  __v: 0
+}
+{}
+------
+null
+Error al eliminar la imagen antigua: [Error: ENOENT: no such file or directory, unlink '/home/bejoycesuservps/Proyectos/Rising/back/uploads/null'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'unlink',
+  path: '/home/bejoycesuservps/Proyectos/Rising/back/uploads/null'
+}
+{
+  _id: new ObjectId("65b6a95e0450edcd96ed4b1e"),
+  name: 'user',
+  username: 'user',
+  password: '$2a$10$l8ixUVfGcVCTJ4LrlsICIu55vw4sHOaatLG.jkeOUNvP8AwO1BrxW',
+  role: 'admin',
+  active: true,
+  __v: 0
+}
+------
+{
+  title: 'PRIMEROS AUXILIOS',
+  price: '150',
+  miniature: 'blob:https://risingconsultora.com/7446dd10-0184-485e-97c9-91b9532e3115',
+  workload: '20'
+}
+{
+  _id: new ObjectId("65f1aa6d45ad8cd09b7ef71d"),
+  title: 'PRIMEROS AUXILIOS',
+  price: 150,
+  workload: 20,
+  miniature: 'null',
+  __v: 0
+}
+{
+  file: {
+    fieldName: 'file',
+    originalFilename: 'awiwiw.png',
+    path: 'uploads/course/HRD6HSYBFGihhf-rNWbO-v1I.png',
+    headers: {
+      'content-disposition': 'form-data; name="file"; filename="awiwiw.png"',
+      'content-type': 'image/png'
+    },
+    size: 7293,
+    name: 'awiwiw.png',
+    type: 'image/png'
+  }
+}
+------
+null
+Error al eliminar la imagen antigua: [Error: ENOENT: no such file or directory, unlink '/home/bejoycesuservps/Proyectos/Rising/back/uploads/null'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'unlink',
+  path: '/home/bejoycesuservps/Proyectos/Rising/back/uploads/null'
+}
+------
+{
+  title: 'PRIMEROS AUXILIOS',
+  price: '150',
+  miniature: 'course/HRD6HSYBFGihhf-rNWbO-v1I.png',
+  workload: '20',
+  file: 'null'
+}
+{
+  _id: new ObjectId("65f1aa6d45ad8cd09b7ef71d"),
+  title: 'PRIMEROS AUXILIOS',
+  price: 150,
+  workload: 20,
+  miniature: 'course/HRD6HSYBFGihhf-rNWbO-v1I.png',
+  __v: 0
+}
+{}
+------
+course/HRD6HSYBFGihhf-rNWbO-v1I.png
+------
+{
+  title: 'PRIMEROS AUXILIOS',
+  price: '150',
+  miniature: 'blob:https://risingconsultora.com/2a916725-a8b3-4aca-8076-5f4e5486e271',
+  workload: '20'
+}
+{
+  _id: new ObjectId("65f1aa6d45ad8cd09b7ef71d"),
+  title: 'PRIMEROS AUXILIOS',
+  price: 150,
+  workload: 20,
+  miniature: 'null',
+  __v: 0
+}
+{
+  file: {
+    fieldName: 'file',
+    originalFilename: 'WhatsApp Image 2024-03-27 at 1.19.11 PM (1).jpeg',
+    path: 'uploads/course/n_RWQ7iRXPnyqJGhwiDMVGVQ.jpeg',
+    headers: {
+      'content-disposition': 'form-data; name="file"; filename="WhatsApp Image 2024-03-27 at 1.19.11 PM (1).jpeg"',
+      'content-type': 'image/jpeg'
+    },
+    size: 273339,
+    name: 'WhatsApp Image 2024-03-27 at 1.19.11 PM (1).jpeg',
+    type: 'image/jpeg'
+  }
+}
+------
+null
+Error al eliminar la imagen antigua: [Error: ENOENT: no such file or directory, unlink '/home/bejoycesuservps/Proyectos/Rising/back/uploads/null'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'unlink',
+  path: '/home/bejoycesuservps/Proyectos/Rising/back/uploads/null'
+}
+------
+{
+  title: 'PRIMEROS AUXILIOS',
+  price: '150',
+  miniature: 'blob:https://risingconsultora.com/3647316f-1fa2-4795-9064-5a1b94f74ce0',
+  workload: '20'
+}
+{
+  _id: new ObjectId("65f1aa6d45ad8cd09b7ef71d"),
+  title: 'PRIMEROS AUXILIOS',
+  price: 150,
+  workload: 20,
+  miniature: 'course/n_RWQ7iRXPnyqJGhwiDMVGVQ.jpeg',
+  __v: 0
+}
+{
+  file: {
+    fieldName: 'file',
+    originalFilename: 'awiwiw.png',
+    path: 'uploads/course/V1mUvkeqUPq7LBbWvYxCyxO7.png',
+    headers: {
+      'content-disposition': 'form-data; name="file"; filename="awiwiw.png"',
+      'content-type': 'image/png'
+    },
+    size: 7293,
+    name: 'awiwiw.png',
+    type: 'image/png'
+  }
+}
+------
+course/n_RWQ7iRXPnyqJGhwiDMVGVQ.jpeg
+------
+{
+  title: 'PRIMEROS AUXILIOS',
+  price: '150',
+  miniature: 'blob:https://risingconsultora.com/2d1dc650-e2f4-40c8-b7e6-2baa41f71a7c',
+  workload: '20'
+}
+{
+  _id: new ObjectId("65f1aa6d45ad8cd09b7ef71d"),
+  title: 'PRIMEROS AUXILIOS',
+  price: 150,
+  workload: 20,
+  miniature: 'course/V1mUvkeqUPq7LBbWvYxCyxO7.png',
+  __v: 0
+}
+{
+  file: {
+    fieldName: 'file',
+    originalFilename: 'WhatsApp Image 2024-03-27 at 1.19.11 PM (1).jpeg',
+    path: 'uploads/course/P2x2ce2AVKOqdfUJDz_epR91.jpeg',
+    headers: {
+      'content-disposition': 'form-data; name="file"; filename="WhatsApp Image 2024-03-27 at 1.19.11 PM (1).jpeg"',
+      'content-type': 'image/jpeg'
+    },
+    size: 273339,
+    name: 'WhatsApp Image 2024-03-27 at 1.19.11 PM (1).jpeg',
+    type: 'image/jpeg'
+  }
+}
+------
+course/V1mUvkeqUPq7LBbWvYxCyxO7.png
+{
+  _id: new ObjectId("65a9e3063ebc167586985c73"),
+  name: 'Carla Yessica Zarate',
+  username: 'Carla Zarate 25',
+  role: 'admin',
+  active: true,
+  password: '$2a$10$HkS8HPrNKOiT55htEBFqJuhKnqKSsKE606hijJcfA7s1Sfw0yqvVi',
+  __v: 0
+}
+------
+{
+  title: 'PRIMEROS AUXILIOS',
+  price: '75',
+  miniature: 'course/P2x2ce2AVKOqdfUJDz_epR91.jpeg',
+  workload: '20'
+}
+{
+  _id: new ObjectId("65f1aa6d45ad8cd09b7ef71d"),
+  title: 'PRIMEROS AUXILIOS',
+  price: 150,
+  workload: 20,
+  miniature: 'course/P2x2ce2AVKOqdfUJDz_epR91.jpeg',
+  __v: 0
+}
+{}
+------
+course/P2x2ce2AVKOqdfUJDz_epR91.jpeg
+------
+{
+  title: 'PRIMEROS AUXILIOS',
+  price: '75',
+  miniature: 'blob:https://risingconsultora.com/53875e49-872b-4228-8882-8b36820e9374',
+  workload: '20'
+}
+{
+  _id: new ObjectId("65f1aa6d45ad8cd09b7ef71d"),
+  title: 'PRIMEROS AUXILIOS',
+  price: 75,
+  workload: 20,
+  miniature: 'null',
+  __v: 0
+}
+{
+  file: {
+    fieldName: 'file',
+    originalFilename: 'curso en primeros auxilios (5) (1).png',
+    path: 'uploads/course/PQI4Nd2y3jU4CWU-Eo6zd3B3.png',
+    headers: {
+      'content-disposition': 'form-data; name="file"; filename="curso en primeros auxilios (5) (1).png"',
+      'content-type': 'image/png'
+    },
+    size: 187185,
+    name: 'curso en primeros auxilios (5) (1).png',
+    type: 'image/png'
+  }
+}
+------
+null
+Error al eliminar la imagen antigua: [Error: ENOENT: no such file or directory, unlink '/home/bejoycesuservps/Proyectos/Rising/back/uploads/null'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'unlink',
+  path: '/home/bejoycesuservps/Proyectos/Rising/back/uploads/null'
+}
+{
+  _id: new ObjectId("65a9e3063ebc167586985c73"),
+  name: 'Carla Yessica Zarate',
+  username: 'Carla Zarate 25',
+  role: 'admin',
+  active: true,
+  password: '$2a$10$HkS8HPrNKOiT55htEBFqJuhKnqKSsKE606hijJcfA7s1Sfw0yqvVi',
+  __v: 0
+}
+------
+{
+  title: 'PRIMEROS AUXILIOS',
+  price: '150',
+  miniature: 'course/PQI4Nd2y3jU4CWU-Eo6zd3B3.png',
+  workload: '20'
+}
+{
+  _id: new ObjectId("65f1aa6d45ad8cd09b7ef71d"),
+  title: 'PRIMEROS AUXILIOS',
+  price: 75,
+  workload: 20,
+  miniature: 'course/PQI4Nd2y3jU4CWU-Eo6zd3B3.png',
+  __v: 0
+}
+{}
+------
+course/PQI4Nd2y3jU4CWU-Eo6zd3B3.png
+------
+{
+  title: 'PRIMEROS AUXILIOS',
+  price: '150',
+  miniature: 'blob:https://risingconsultora.com/fa8a3eb8-55a3-484f-b5b5-5a075f3f1e4f',
+  workload: '20'
+}
+{
+  _id: new ObjectId("65f1aa6d45ad8cd09b7ef71d"),
+  title: 'PRIMEROS AUXILIOS',
+  price: 150,
+  workload: 20,
+  miniature: 'null',
+  __v: 0
+}
+{
+  file: {
+    fieldName: 'file',
+    originalFilename: 'curso en primeros auxilios (5) (1).png',
+    path: 'uploads/course/3vSndkoIQZoANau4JStxMF40.png',
+    headers: {
+      'content-disposition': 'form-data; name="file"; filename="curso en primeros auxilios (5) (1).png"',
+      'content-type': 'image/png'
+    },
+    size: 187185,
+    name: 'curso en primeros auxilios (5) (1).png',
+    type: 'image/png'
+  }
+}
+------
+null
+Error al eliminar la imagen antigua: [Error: ENOENT: no such file or directory, unlink '/home/bejoycesuservps/Proyectos/Rising/back/uploads/null'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'unlink',
+  path: '/home/bejoycesuservps/Proyectos/Rising/back/uploads/null'
+}
+{
+  _id: new ObjectId("65b6a95e0450edcd96ed4b1e"),
+  name: 'user',
+  username: 'user',
+  password: '$2a$10$l8ixUVfGcVCTJ4LrlsICIu55vw4sHOaatLG.jkeOUNvP8AwO1BrxW',
+  role: 'admin',
+  active: true,
+  __v: 0
+}
+[
+  {
+    _id: new ObjectId("65f9c47a45ad8cd09b7ef751"),
+    price: 150,
+    date: 2024-03-19T16:59:38.698Z,
+    state: false,
+    code: '9248-fcsb',
+    course: {
+      _id: new ObjectId("65f1aa6d45ad8cd09b7ef71d"),
+      title: 'PRIMEROS AUXILIOS',
+      price: 150,
+      workload: 20,
+      miniature: 'course/3vSndkoIQZoANau4JStxMF40.png',
+      __v: 0
+    },
+    clientid: {
+      _id: new ObjectId("65f9c47a45ad8cd09b7ef74e"),
+      name: 'María Isabel Torrico Encinas',
+      ci: '0000000',
+      grade: 'Lic.',
+      phone: '77797250',
+      city: 'Santa Cruz',
+      __v: 0
+    },
+    seller: new ObjectId("65a9e3063ebc167586985c73"),
+    __v: 0
+  }
+]
+[
+  {
+    _id: new ObjectId("65f9c47a45ad8cd09b7ef751"),
+    price: 150,
+    date: 2024-03-19T16:59:38.698Z,
+    state: false,
+    code: '9248-fcsb',
+    course: {
+      _id: new ObjectId("65f1aa6d45ad8cd09b7ef71d"),
+      title: 'PRIMEROS AUXILIOS',
+      price: 150,
+      workload: 20,
+      miniature: 'course/3vSndkoIQZoANau4JStxMF40.png',
+      __v: 0
+    },
+    clientid: {
+      _id: new ObjectId("65f9c47a45ad8cd09b7ef74e"),
+      name: 'María Isabel Torrico Encinas',
+      ci: '0000000',
+      grade: 'Lic.',
+      phone: '77797250',
+      city: 'Santa Cruz',
+      __v: 0
+    },
+    seller: new ObjectId("65a9e3063ebc167586985c73"),
+    __v: 0
+  }
+]
+{
+  _id: new ObjectId("65f9c47a45ad8cd09b7ef751"),
+  price: 150,
+  date: 2024-03-19T16:59:38.698Z,
+  state: false,
+  code: '9248-fcsb',
+  course: {
+    _id: new ObjectId("65f1aa6d45ad8cd09b7ef71d"),
+    title: 'PRIMEROS AUXILIOS',
+    price: 150,
+    workload: 20,
+    miniature: 'course/3vSndkoIQZoANau4JStxMF40.png',
+    __v: 0
+  },
+  clientid: {
+    _id: new ObjectId("65f9c47a45ad8cd09b7ef74e"),
+    name: 'María Isabel Torrico Encinas',
+    ci: '0000000',
+    grade: 'Lic.',
+    phone: '77797250',
+    city: 'Santa Cruz',
+    __v: 0
+  },
+  seller: new ObjectId("65a9e3063ebc167586985c73"),
+  __v: 0
+}
+[
+  {
+    _id: new ObjectId("661bf61acd30a52c9019a5d3"),
+    price: 150,
+    date: 2024-04-14T15:28:26.185Z,
+    state: false,
+    code: '8738-qmtc',
+    course: {
+      _id: new ObjectId("65f1aa6d45ad8cd09b7ef71d"),
+      title: 'PRIMEROS AUXILIOS',
+      price: 150,
+      workload: 20,
+      miniature: 'course/3vSndkoIQZoANau4JStxMF40.png',
+      __v: 0
+    },
+    clientid: {
+      _id: new ObjectId("661bf61acd30a52c9019a5d0"),
+      name: 'jaimito',
+      ci: '123',
+      grade: 'Sin grado academico',
+      phone: '123',
+      city: 'Potosi',
+      __v: 0
+    },
+    seller: new ObjectId("65b6a95e0450edcd96ed4b1e"),
+    __v: 0
+  }
+]
+{
+  _id: new ObjectId("661bf61acd30a52c9019a5d3"),
+  price: 150,
+  date: 2024-04-14T15:28:26.185Z,
+  state: false,
+  code: '8738-qmtc',
+  course: {
+    _id: new ObjectId("65f1aa6d45ad8cd09b7ef71d"),
+    title: 'PRIMEROS AUXILIOS',
+    price: 150,
+    workload: 20,
+    miniature: 'course/3vSndkoIQZoANau4JStxMF40.png',
+    __v: 0
+  },
+  clientid: {
+    _id: new ObjectId("661bf61acd30a52c9019a5d0"),
+    name: 'jaimito',
+    ci: '123',
+    grade: 'Sin grado academico',
+    phone: '123',
+    city: 'Potosi',
+    __v: 0
+  },
+  seller: new ObjectId("65b6a95e0450edcd96ed4b1e"),
+  __v: 0
+}
+{
+  _id: new ObjectId("661bf61acd30a52c9019a5d3"),
+  price: 150,
+  date: 2024-04-14T15:28:26.185Z,
+  state: false,
+  code: '8738-qmtc',
+  course: {
+    _id: new ObjectId("65f1aa6d45ad8cd09b7ef71d"),
+    title: 'PRIMEROS AUXILIOS',
+    price: 150,
+    workload: 20,
+    miniature: 'course/3vSndkoIQZoANau4JStxMF40.png',
+    __v: 0
+  },
+  clientid: {
+    _id: new ObjectId("661bf61acd30a52c9019a5d0"),
+    name: 'jaimito',
+    ci: '123',
+    grade: 'Sin grado academico',
+    phone: '123',
+    city: 'Potosi',
+    __v: 0
+  },
+  seller: new ObjectId("65b6a95e0450edcd96ed4b1e"),
+  __v: 0
+}
+{
+  _id: new ObjectId("661bf61acd30a52c9019a5d3"),
+  price: 150,
+  date: 2024-04-14T15:28:26.185Z,
+  state: false,
+  code: '8738-qmtc',
+  course: {
+    _id: new ObjectId("65f1aa6d45ad8cd09b7ef71d"),
+    title: 'PRIMEROS AUXILIOS',
+    price: 150,
+    workload: 20,
+    miniature: 'course/3vSndkoIQZoANau4JStxMF40.png',
+    __v: 0
+  },
+  clientid: {
+    _id: new ObjectId("661bf61acd30a52c9019a5d0"),
+    name: 'jaimito',
+    ci: '123',
+    grade: 'Sin grado academico',
+    phone: '123',
+    city: 'Potosi',
+    __v: 0
+  },
+  seller: new ObjectId("65b6a95e0450edcd96ed4b1e"),
+  __v: 0
+}
+{
+  _id: new ObjectId("661bf61acd30a52c9019a5d3"),
+  price: 150,
+  date: 2024-04-14T15:28:26.185Z,
+  state: false,
+  code: '8738-qmtc',
+  course: {
+    _id: new ObjectId("65f1aa6d45ad8cd09b7ef71d"),
+    title: 'PRIMEROS AUXILIOS',
+    price: 150,
+    workload: 20,
+    miniature: 'course/3vSndkoIQZoANau4JStxMF40.png',
+    __v: 0
+  },
+  clientid: {
+    _id: new ObjectId("661bf61acd30a52c9019a5d0"),
+    name: 'jaimito',
+    ci: '123',
+    grade: 'Sin grado academico',
+    phone: '123',
+    city: 'Potosi',
+    __v: 0
+  },
+  seller: new ObjectId("65b6a95e0450edcd96ed4b1e"),
+  __v: 0
+}
+{
+  _id: new ObjectId("661bf61acd30a52c9019a5d3"),
+  price: 150,
+  date: 2024-04-14T15:28:26.185Z,
+  state: false,
+  code: '8738-qmtc',
+  course: {
+    _id: new ObjectId("65f1aa6d45ad8cd09b7ef71d"),
+    title: 'PRIMEROS AUXILIOS',
+    price: 150,
+    workload: 20,
+    miniature: 'course/3vSndkoIQZoANau4JStxMF40.png',
+    __v: 0
+  },
+  clientid: {
+    _id: new ObjectId("661bf61acd30a52c9019a5d0"),
+    name: 'jaimito',
+    ci: '123',
+    grade: 'Sin grado academico',
+    phone: '123',
+    city: 'Potosi',
+    __v: 0
+  },
+  seller: new ObjectId("65b6a95e0450edcd96ed4b1e"),
+  __v: 0
+}
+{
+  _id: new ObjectId("65a9e3063ebc167586985c73"),
+  name: 'Carla Yessica Zarate',
+  username: 'Carla Zarate 25',
+  role: 'admin',
+  active: true,
+  password: '$2a$10$HkS8HPrNKOiT55htEBFqJuhKnqKSsKE606hijJcfA7s1Sfw0yqvVi',
+  __v: 0
+}
+[
+  {
+    _id: new ObjectId("65f9c47a45ad8cd09b7ef751"),
+    price: 150,
+    date: 2024-03-19T16:59:38.698Z,
+    state: false,
+    code: '9248-fcsb',
+    course: {
+      _id: new ObjectId("65f1aa6d45ad8cd09b7ef71d"),
+      title: 'PRIMEROS AUXILIOS',
+      price: 150,
+      workload: 20,
+      miniature: 'course/3vSndkoIQZoANau4JStxMF40.png',
+      __v: 0
+    },
+    clientid: {
+      _id: new ObjectId("65f9c47a45ad8cd09b7ef74e"),
+      name: 'María Isabel Torrico Encinas',
+      ci: '0000000',
+      grade: 'Lic.',
+      phone: '77797250',
+      city: 'Santa Cruz',
+      __v: 0
+    },
+    seller: new ObjectId("65a9e3063ebc167586985c73"),
+    __v: 0
+  }
+]
+{
+  _id: new ObjectId("65b6a95e0450edcd96ed4b1e"),
+  name: 'user',
+  username: 'user',
+  password: '$2a$10$l8ixUVfGcVCTJ4LrlsICIu55vw4sHOaatLG.jkeOUNvP8AwO1BrxW',
+  role: 'admin',
+  active: true,
+  __v: 0
+}
+{
+  _id: new ObjectId("65a9e3063ebc167586985c73"),
+  name: 'Carla Yessica Zarate',
+  username: 'Carla Zarate 25',
+  role: 'admin',
+  active: true,
+  password: '$2a$10$HkS8HPrNKOiT55htEBFqJuhKnqKSsKE606hijJcfA7s1Sfw0yqvVi',
+  __v: 0
+}
+[
+  {
+    _id: new ObjectId("65f9c47a45ad8cd09b7ef751"),
+    price: 150,
+    date: 2024-03-19T16:59:38.698Z,
+    state: false,
+    code: '9248-fcsb',
+    course: {
+      _id: new ObjectId("65f1aa6d45ad8cd09b7ef71d"),
+      title: 'PRIMEROS AUXILIOS',
+      price: 150,
+      workload: 20,
+      miniature: 'course/3vSndkoIQZoANau4JStxMF40.png',
+      __v: 0
+    },
+    clientid: {
+      _id: new ObjectId("65f9c47a45ad8cd09b7ef74e"),
+      name: 'María Isabel Torrico Encinas',
+      ci: '0000000',
+      grade: 'Lic.',
+      phone: '77797250',
+      city: 'Santa Cruz',
+      __v: 0
+    },
+    seller: new ObjectId("65a9e3063ebc167586985c73"),
+    __v: 0
+  }
+]
+{
+  _id: new ObjectId("65f9c47a45ad8cd09b7ef751"),
+  price: 150,
+  date: 2024-03-19T16:59:38.698Z,
+  state: false,
+  code: '9248-fcsb',
+  course: {
+    _id: new ObjectId("65f1aa6d45ad8cd09b7ef71d"),
+    title: 'PRIMEROS AUXILIOS',
+    price: 150,
+    workload: 20,
+    miniature: 'course/3vSndkoIQZoANau4JStxMF40.png',
+    __v: 0
+  },
+  clientid: {
+    _id: new ObjectId("65f9c47a45ad8cd09b7ef74e"),
+    name: 'María Isabel Torrico Encinas',
+    ci: '0000000',
+    grade: 'Lic.',
+    phone: '77797250',
+    city: 'Santa Cruz',
+    __v: 0
+  },
+  seller: new ObjectId("65a9e3063ebc167586985c73"),
+  __v: 0
+}
+[
+  {
+    _id: new ObjectId("65f9c47a45ad8cd09b7ef751"),
+    price: 150,
+    date: 2024-03-19T16:59:38.698Z,
+    state: false,
+    code: '9248-fcsb',
+    course: {
+      _id: new ObjectId("65f1aa6d45ad8cd09b7ef71d"),
+      title: 'PRIMEROS AUXILIOS',
+      price: 150,
+      workload: 20,
+      miniature: 'course/3vSndkoIQZoANau4JStxMF40.png',
+      __v: 0
+    },
+    clientid: {
+      _id: new ObjectId("65f9c47a45ad8cd09b7ef74e"),
+      name: 'María Isabel Torrico Encinas',
+      ci: '0000000',
+      grade: 'Sin grado academico',
+      phone: '77797250',
+      city: 'Santa Cruz',
+      __v: 0
+    },
+    seller: new ObjectId("65a9e3063ebc167586985c73"),
+    __v: 0
+  }
+]
+{
+  _id: new ObjectId("65f9c47a45ad8cd09b7ef751"),
+  price: 150,
+  date: 2024-03-19T16:59:38.698Z,
+  state: false,
+  code: '9248-fcsb',
+  course: {
+    _id: new ObjectId("65f1aa6d45ad8cd09b7ef71d"),
+    title: 'PRIMEROS AUXILIOS',
+    price: 150,
+    workload: 20,
+    miniature: 'course/3vSndkoIQZoANau4JStxMF40.png',
+    __v: 0
+  },
+  clientid: {
+    _id: new ObjectId("65f9c47a45ad8cd09b7ef74e"),
+    name: 'María Isabel Torrico Encinas',
+    ci: '0000000',
+    grade: 'Sin grado academico',
+    phone: '77797250',
+    city: 'Santa Cruz',
+    __v: 0
+  },
+  seller: new ObjectId("65a9e3063ebc167586985c73"),
+  __v: 0
+}
+{
+  _id: new ObjectId("65a9e3063ebc167586985c73"),
+  name: 'Carla Yessica Zarate',
+  username: 'Carla Zarate 25',
+  role: 'admin',
+  active: true,
+  password: '$2a$10$HkS8HPrNKOiT55htEBFqJuhKnqKSsKE606hijJcfA7s1Sfw0yqvVi',
+  __v: 0
+}
+[
+  {
+    _id: new ObjectId("65f9c47a45ad8cd09b7ef751"),
+    price: 150,
+    date: 2024-03-19T16:59:38.698Z,
+    state: false,
+    code: '9248-fcsb',
+    course: {
+      _id: new ObjectId("65f1aa6d45ad8cd09b7ef71d"),
+      title: 'PRIMEROS AUXILIOS',
+      price: 150,
+      workload: 20,
+      miniature: 'course/3vSndkoIQZoANau4JStxMF40.png',
+      __v: 0
+    },
+    clientid: {
+      _id: new ObjectId("65f9c47a45ad8cd09b7ef74e"),
+      name: 'María Isabel Torrico Encinas',
+      ci: '0000000',
+      grade: 'Sin grado academico',
+      phone: '77797250',
+      city: 'Santa Cruz',
+      __v: 0
+    },
+    seller: new ObjectId("65a9e3063ebc167586985c73"),
+    __v: 0
+  }
+]
+{
+  _id: new ObjectId("65b6a95e0450edcd96ed4b1e"),
+  name: 'user',
+  username: 'user',
+  password: '$2a$10$l8ixUVfGcVCTJ4LrlsICIu55vw4sHOaatLG.jkeOUNvP8AwO1BrxW',
+  role: 'admin',
+  active: true,
+  __v: 0
+}
+[
+  {
+    _id: new ObjectId("65f9c47a45ad8cd09b7ef751"),
+    price: 150,
+    date: 2024-03-19T16:59:38.698Z,
+    state: false,
+    code: '9248-fcsb',
+    course: {
+      _id: new ObjectId("65f1aa6d45ad8cd09b7ef71d"),
+      title: 'PRIMEROS AUXILIOS',
+      price: 150,
+      workload: 20,
+      miniature: 'course/3vSndkoIQZoANau4JStxMF40.png',
+      __v: 0
+    },
+    clientid: {
+      _id: new ObjectId("65f9c47a45ad8cd09b7ef74e"),
+      name: 'María Isabel Torrico Encinas',
+      ci: '0000000',
+      grade: 'Sin grado academico',
+      phone: '77797250',
+      city: 'Santa Cruz',
+      __v: 0
+    },
+    seller: new ObjectId("65a9e3063ebc167586985c73"),
+    __v: 0
+  }
+]
+{
+  _id: new ObjectId("65f9c47a45ad8cd09b7ef751"),
+  price: 150,
+  date: 2024-03-19T16:59:38.698Z,
+  state: false,
+  code: '9248-fcsb',
+  course: {
+    _id: new ObjectId("65f1aa6d45ad8cd09b7ef71d"),
+    title: 'PRIMEROS AUXILIOS',
+    price: 150,
+    workload: 20,
+    miniature: 'course/3vSndkoIQZoANau4JStxMF40.png',
+    __v: 0
+  },
+  clientid: {
+    _id: new ObjectId("65f9c47a45ad8cd09b7ef74e"),
+    name: 'María Isabel Torrico Encinas',
+    ci: '0000000',
+    grade: 'Sin grado academico',
+    phone: '77797250',
+    city: 'Santa Cruz',
+    __v: 0
+  },
+  seller: new ObjectId("65a9e3063ebc167586985c73"),
+  __v: 0
+}
+{
+  _id: new ObjectId("65f9c47a45ad8cd09b7ef751"),
+  price: 150,
+  date: 2024-03-19T16:59:38.698Z,
+  state: false,
+  code: '9248-fcsb',
+  course: {
+    _id: new ObjectId("65f1aa6d45ad8cd09b7ef71d"),
+    title: 'PRIMEROS AUXILIOS',
+    price: 150,
+    workload: 20,
+    miniature: 'course/3vSndkoIQZoANau4JStxMF40.png',
+    __v: 0
+  },
+  clientid: {
+    _id: new ObjectId("65f9c47a45ad8cd09b7ef74e"),
+    name: 'María Isabel Torrico Encinas',
+    ci: '0000000',
+    grade: 'Sin grado academico',
+    phone: '77797250',
+    city: 'Santa Cruz',
+    __v: 0
+  },
+  seller: new ObjectId("65a9e3063ebc167586985c73"),
+  __v: 0
+}
+[
+  {
+    _id: new ObjectId("65f9c47a45ad8cd09b7ef751"),
+    price: 150,
+    date: 2024-03-19T16:59:38.698Z,
+    state: false,
+    code: '9248-fcsb',
+    course: {
+      _id: new ObjectId("65f1aa6d45ad8cd09b7ef71d"),
+      title: 'PRIMEROS AUXILIOS',
+      price: 150,
+      workload: 20,
+      miniature: 'course/3vSndkoIQZoANau4JStxMF40.png',
+      __v: 0
+    },
+    clientid: {
+      _id: new ObjectId("65f9c47a45ad8cd09b7ef74e"),
+      name: 'María Isabel Torrico Encinas',
+      ci: '0000000',
+      grade: 'Sin grado academico',
+      phone: '77797250',
+      city: 'Santa Cruz',
+      __v: 0
+    },
+    seller: new ObjectId("65a9e3063ebc167586985c73"),
+    __v: 0
+  }
+]
+{
+  _id: new ObjectId("65f9c47a45ad8cd09b7ef751"),
+  price: 150,
+  date: 2024-03-19T16:59:38.698Z,
+  state: false,
+  code: '9248-fcsb',
+  course: {
+    _id: new ObjectId("65f1aa6d45ad8cd09b7ef71d"),
+    title: 'PRIMEROS AUXILIOS',
+    price: 150,
+    workload: 20,
+    miniature: 'course/3vSndkoIQZoANau4JStxMF40.png',
+    __v: 0
+  },
+  clientid: {
+    _id: new ObjectId("65f9c47a45ad8cd09b7ef74e"),
+    name: 'María Isabel Torrico Encinas',
+    ci: '0000000',
+    grade: 'Sin grado academico',
+    phone: '77797250',
+    city: 'Santa Cruz',
+    __v: 0
+  },
+  seller: new ObjectId("65a9e3063ebc167586985c73"),
+  __v: 0
+}
+{
+  _id: new ObjectId("65a9e3063ebc167586985c73"),
+  name: 'Carla Yessica Zarate',
+  username: 'Carla Zarate 25',
+  role: 'admin',
+  active: true,
+  password: '$2a$10$HkS8HPrNKOiT55htEBFqJuhKnqKSsKE606hijJcfA7s1Sfw0yqvVi',
+  __v: 0
+}
+[
+  {
+    _id: new ObjectId("65f9c47a45ad8cd09b7ef751"),
+    price: 150,
+    date: 2024-03-19T16:59:38.698Z,
+    state: false,
+    code: '9248-fcsb',
+    course: {
+      _id: new ObjectId("65f1aa6d45ad8cd09b7ef71d"),
+      title: 'PRIMEROS AUXILIOS',
+      price: 150,
+      workload: 20,
+      miniature: 'course/3vSndkoIQZoANau4JStxMF40.png',
+      __v: 0
+    },
+    clientid: {
+      _id: new ObjectId("65f9c47a45ad8cd09b7ef74e"),
+      name: 'María Isabel Torrico Encinas',
+      ci: '0000000',
+      grade: 'Sin grado academico',
+      phone: '77797250',
+      city: 'Santa Cruz',
+      __v: 0
+    },
+    seller: new ObjectId("65a9e3063ebc167586985c73"),
+    __v: 0
+  }
+]
+{
+  _id: new ObjectId("65f9c47a45ad8cd09b7ef751"),
+  price: 150,
+  date: 2024-03-19T16:59:38.698Z,
+  state: false,
+  code: '9248-fcsb',
+  course: {
+    _id: new ObjectId("65f1aa6d45ad8cd09b7ef71d"),
+    title: 'PRIMEROS AUXILIOS',
+    price: 150,
+    workload: 20,
+    miniature: 'course/3vSndkoIQZoANau4JStxMF40.png',
+    __v: 0
+  },
+  clientid: {
+    _id: new ObjectId("65f9c47a45ad8cd09b7ef74e"),
+    name: 'María Isabel Torrico Encinas',
+    ci: '0000000',
+    grade: 'Sin grado academico',
+    phone: '77797250',
+    city: 'Santa Cruz',
+    __v: 0
+  },
+  seller: new ObjectId("65a9e3063ebc167586985c73"),
+  __v: 0
+}
